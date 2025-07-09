@@ -9,6 +9,7 @@ import SearchScreen from "./SearchScreen";
 const Tab = createBottomTabNavigator();
 
 export default function BottomTab() {
+  return(
   <Tab.Navigator>
     <Tab.Screen
       name="Homescreen"
@@ -46,5 +47,6 @@ export default function BottomTab() {
         ),
       }}
     />
-  </Tab.Navigator>;
+    </Tab.Navigator>
+  )
 }
