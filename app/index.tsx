@@ -3,18 +3,18 @@ import { StatusBar } from "react-native";
 import Images from "../Src/Constants/Images";
 import { Colors } from '../Src/Constants/Colors';
 import { Animated } from "react-native";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import * as Animatable from 'react-native-animatable';
 // import {MotiImage} from 'moti'
 export default function Index() {
-  const fadeAnim = new Animated.Value(0); // Initial value for opacity: 0
+  const slideAnim = useRef(new Animated.Value(200)).current; // Initial value for opacity: 0
   useEffect(() => {
- Animated.timing(fadeAnim, {
-      toValue: 1,
-      duration: 2000,
+ Animated.timing(slideAnim, {
+      toValue: 0,
+      duration: 1500,
       useNativeDriver: true,
     }).start();
-  }[])
+  },[])
   return (
    <View style={{flex:1,backgroundColor:Colors.main}}>
     <StatusBar backgroundColor={Colors.main}/>
@@ -28,8 +28,7 @@ export default function Index() {
           width: 300,
           height: 300,
           alignSelf: 'center',
-          opacity: fadeAnim, 
-          marginTop: 50,
+          marginTop: 50,  transform: [{ translateX: slideAnim }],
         }}
       />
     <Text style={{fontSize:16,fontWeight:'bold',marginLeft:95,marginTop:55}}>Craving Delicious Food?</Text>
