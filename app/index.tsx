@@ -6,18 +6,13 @@ import { Image, ImageBackground, Text, View } from "react-native";
 
 const index = () => {
   return (
-    <ImageBackground
-      source={Images.smoke}
-      imageStyle={{ opacity: 0.5 }}
-      style={{ flex: 1, alignItems: "center" }}
-    >
+   
       <View style={general.conver}>
         <Text style={[general.text, { color: Colors.white }]}>
           Fast <Text style={[general.text, { color: Colors.green }]}>Food</Text>
         </Text>
         <Image source={Images.burger} style={general.burger} />
       </View>
-    </ImageBackground>
   );
 };
 
