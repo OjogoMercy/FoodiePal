@@ -28,10 +28,15 @@ const general = StyleSheet.create({
     padding: 20,
   },
   burger: {
-    width: '100%',
+    width:260,
     height: 260,
-      marginTop: 20,
+    marginTop: 20,
     alignSelf: "center",
+  },
+  background: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
   },
 });
 export default general;
