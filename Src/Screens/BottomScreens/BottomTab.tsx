@@ -9,44 +9,48 @@ import SearchScreen from "./SearchScreen";
 const Tab = createBottomTabNavigator();
 
 export default function BottomTab() {
-  return(
-  <Tab.Navigator>
-    <Tab.Screen
-      name="Homescreen"
-      component={Homescreen}
-      options={{
-        tabBarIcon: ({ color, size }) => (
-          <Ionicons name="home" color={color} size={size} />
-        ),
-      }}
-    />
-    <Tab.Screen
-      name="SearchScreen"
-      component={SearchScreen}
-      options={{
-        tabBarIcon: ({ color, size }) => (
-          <Ionicons name="search" color={color} size={size} />
-        ),
-      }}
-    />
-    <Tab.Screen
-      name="CartScreen"
-      component={CartScreen}
-      options={{
-        tabBarIcon: ({ color, size }) => (
-          <Ionicons name="cart" color={color} size={size} />
-        ),
-      }}
-    />
-    <Tab.Screen
-      name="Profile"
-      component={Profile}
-      options={{
-        tabBarIcon: ({ color, size }) => (
-          <Ionicons name="people" color={color} size={size} />
-        ),
-      }}
-    />
+  return (
+    <Tab.Navigator screenOptions={{headerShown:false}}>
+      <Tab.Screen
+        name="Homescreen"
+        component={Homescreen}
+        options={{
+          tabBarActiveTintColor: "tomato",
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="home" color={color} size={size} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="SearchScreen"
+        component={SearchScreen}
+        options={{
+          tabBarActiveTintColor: "tomato",
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="search" color={color} size={size} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="CartScreen"
+        component={CartScreen}
+        options={{
+          tabBarActiveTintColor: "tomato",
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="cart" color={color} size={size} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Profile"
+        component={Profile}
+        options={{
+          tabBarActiveTintColor: "tomato",
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="people" color={color} size={size} />
+          ),
+        }}
+      />
     </Tab.Navigator>
-  )
+  );
 }

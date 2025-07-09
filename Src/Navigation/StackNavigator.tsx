@@ -17,7 +17,7 @@ const StackNavigator = () => {
   <NavigationIndependentTree>
     <NavigationContainer>
       <stack.Navigator
-        initialRouteName="BottomTab"
+        initialRouteName="Index"
         screenOptions={{ headerShown: false }} >
         <stack.Screen name="Homescreen" component={Homescreen} />
         <stack.Screen name="SignUp" component={SignUp} />
