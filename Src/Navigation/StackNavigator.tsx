@@ -1,23 +1,27 @@
-import React from "react";
-import { NavigationContainer } from "@react-navigation/native";
+import {
+  NavigationContainer,
+  NavigationIndependentTree,
+} from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { NavigationIndependentTree } from "@react-navigation/native";
-import Homescreen from "../Screens/BottomScreens/Homescreen";
-import SignUp from "../Screens/AuthScreens/SignUp";
-import FoodDetails from "../Screens/FoodDetails";
+import React from "react";
 import LoginScreen from "../Screens/AuthScreens/LoginScreen";
+import SignUp from "../Screens/AuthScreens/SignUp";
+import BottomTab from "../Screens/BottomScreens/BottomTab";
+import Homescreen from "../Screens/BottomScreens/Homescreen";
+import FoodDetails from "../Screens/FoodDetails";
 
 const stack = createNativeStackNavigator();
 const StackNavigator = () => {
-    <NavigationIndependentTree>
-        <NavigationContainer>
-            <stack.Navigator>
-                <stack.Screen name="Homescreen" component={Homescreen} />
-                <stack.Screen name="SignUp" component={SignUp} />
-                <stack.Screen name="FoodDetails" component={FoodDetails} />
-                <stack.Screen name="LoginScreen" component={LoginScreen} />
-            </stack.Navigator>
+  <NavigationIndependentTree>
+    <NavigationContainer>
+      <stack.Navigator>
+        <stack.Screen name="Homescreen" component={Homescreen} />
+        <stack.Screen name="SignUp" component={SignUp} />
+        <stack.Screen name="FoodDetails" component={FoodDetails} />
+              <stack.Screen name="LoginScreen" component={LoginScreen} />
+        <stack.Screen name="BottomTab" component={BottomTab}/>
+      </stack.Navigator>
     </NavigationContainer>
-</NavigationIndependentTree>
-}
-export default StackNavigator
+  </NavigationIndependentTree>;
+};
+export default StackNavigator;
